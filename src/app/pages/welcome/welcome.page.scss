@@ -1,0 +1,45 @@
+ion-content{
+    --ion-background-color: #E1EAF9;
+}
+
+ion-header{
+    position: absolute;
+}
+
+ion-toolbar{
+    --ion-background-color: transparent;
+    --opacity: 0;
+}
+
+.title-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.signin-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F0F4F4;
+}
+
+.loginbtn{
+    width: 130px;
+}
+
+.signinbtn{
+    margin-left: 12px;
+    width: 130px;
+}
+
+/* welcome.page.scss */
+.error-message {
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,91 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar> </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaulthref="login" text=""> </ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img src="assets/images/header1.png"></ion-img>
+
+    <ion-card-content>
+      <form [formGroup] = "validationFormUser" (ngSubmit) = "LoginUser(validationFormUser.value)">
+        <div class="wrapform">
+          <ion-item>
+            <ion-icon color="primary" name="mail-outline"></ion-icon>
+            <ion-input
+              placeholder="Email"
+              formControlName="email"
+              type="text"
+              name="email"
+              style="margin-left: 10px;"
+              required
+            >
+            </ion-input>
+          </ion-item>
+          <div>
+            <ng-container *ngFor = "let validation of validationUserMessage.email">
+              <div class="error_message" *ngIf = "validationFormUser.get('email')?.hasError(validation.type) && (validationFormUser.get('email')?.dirty || validationFormUser.get('email')?.touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-item>
+            <ion-icon color="primary" name="lock-closed-outline"></ion-icon>
+            <ion-input
+              placeholder="************"
+              formControlName="password"
+              type="password"
+              name="password"
+              style="margin-left: 10px;"
+              required
+            >
+            </ion-input>
+          </ion-item>
+
+          <div>
+            <ng-container *ngFor = "let validation of validationUserMessage.password">
+               <div class="error_message" *ngIf = "validationFormUser.get('password')?.hasError(validation.type) && (validationFormUser.get('password')?.dirty || validationFormUser.get('password')?.touched)">
+                {{ validation.message}}
+               </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="password_forget">
+          <ion-button routerLink = "/reset-password" fill="clear">Forget Password?</ion-button>
+        </div>
+
+        <div style="text-align: center; margin-top: 15px">
+          <ion-button shape="round" style="width: 130px" type = "submit" [disabled] = "!validationFormUser.value">Login</ion-button>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px">
+          <p style="color: rgb(62, 62, 174)">Login via</p>
+          <!-- create icon facebook and google -->
+          <ion-icon
+            size="large"
+            style="margin: 20px 10px; color: rgb(27, 78, 165)"
+            name="logo-facebook"
+          ></ion-icon>
+          <ion-icon
+            size="large"
+            style="margin: 20px 10px; color: rgb(143, 147, 82)"
+            name="logo-google"
+          ></ion-icon>
+          <ion-icon
+            size="large"
+            style="margin: 20px 10px; color: rgb(3, 164, 233)"
+            name="logo-twitter"
+          ></ion-icon>
+        </div>
+
+        <div style="text-align: center">
+          <span>Don't have an account?</span>
+          <ion-button fill="clear" routerLink="/signup">SignUp</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

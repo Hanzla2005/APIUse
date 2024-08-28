@@ -1,0 +1,32 @@
+ion-content {
+    --ion-background-color: rgb(220, 220, 220); /* Directly apply background color */
+    
+    ion-item {
+      margin: 20px;
+      color: black;
+      --ion-background-color: white;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+        --background: white;
+        border: 4px solid rgb(109, 151, 109);
+        --color: black; /* Text color */
+        border-width: 2px; /* Optional: you can adjust the border width */
+        border-style: solid;
+        border-radius: 4px; /* Optional: you can adjust the border radius */
+        --padding-start: 16px; /* Optional: adjust padding */
+        --padding-end: 16px;
+        margin: 11px 20px;
+        justify-content: space-between; /* Space out text and icon */
+        align-items: center;
+      }
+
+      .button-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+}

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar> </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-img src="assets/images/header.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title class="title-1"> Welcome </ion-card-title>
+      <ion-card-subtitle
+        style="
+          font-size: 18px;
+          display: flex;
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        Welcome to Join our app. This app will help you with your health
+        activities
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="signin-btns">
+        <ion-button fill="solid" class="loginbtn" shape="round" routerLink="/commuity"
+          >Login</ion-button
+        >
+        <ion-button class="signinbtn" color="dark" fill="outline" shape="round" routerLink="/signup"
+          >signIn</ion-button
+        >
+      </div>
+
+      <div class="googlelogin" style="text-align: center; margin-top: 15px;">
+        <ion-button color = "danger" shape = "round" (click) = "loginWithGoogle()">
+          Google
+        </ion-button>
+        <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 30px;">
+        <p>Or via social media</p>
+      </div>
+
+      <div class="icon-container" style="margin-top: 15px; display: flex; align-items: center; justify-content: center;">
+        <ion-icon size = "large" name="logo-facebook" style="margin: 10px; "></ion-icon>
+        <ion-icon size = "large" name="logo-google" style="margin: 10px;"></ion-icon>
+        <ion-icon size = "large" name="logo-twitter" style="margin: 10px;"></ion-icon>
+        <ion-icon size = "large" name="logo-instagram" style="margin: 10px;"></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

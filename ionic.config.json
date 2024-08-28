@@ -1,0 +1,7 @@
+{
+  "name": "APIUse",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "684609938412",
+    "project_id": "ionictutorial-34a1c",
+    "storage_bucket": "ionictutorial-34a1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684609938412:android:b95779857df35f530d96c9",
+        "android_client_info": {
+          "package_name": "com.googleAPI"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684609938412-1abgpstnha21gramjvhsct0h1npbill0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.googleAPI",
+            "certificate_hash": "94cd7e4c1c864e419dc133a1382eafb06d5ee36e"
+          }
+        },
+        {
+          "client_id": "684609938412-8u789c1rnn8va8njec6mmkou4j1s8iq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHWq0RryXA0EY77g7sVG-XPHpKtg6FNaE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684609938412-8u789c1rnn8va8njec6mmkou4j1s8iq1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

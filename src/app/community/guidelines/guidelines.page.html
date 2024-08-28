@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>Rules and GuideLines</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="rules">
+    <textarea placeholder="Add Rules Here"></textarea>
+  </div>
+
+  <div id="button" style="margin: 25px 20px;">
+    <ion-button (click) = "navigateToCommunityDetails()" color = "success" style="width: 48%; margin-right: 3px; font-size: 16px;">Next</ion-button>
+    <ion-button (click) = "navigateToCreateCommunity()" color="dark" fill="outline" style="width: 48%; margin-left: 3px; font-size: 16px;">Back</ion-button>
+  </div>
+</ion-content>

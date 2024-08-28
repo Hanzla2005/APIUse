@@ -1,0 +1,136 @@
+.chat-toolbar {
+    --background: #b1f6b1; /* Light green background */
+    --ion-color-primary: #4caf50; /* Darker green for text and icons */
+    color: #4caf50;
+}
+
+.chat-content {
+    --background: #eafde7; /* Lightest green background for content */
+    padding-bottom: 60px; /* Space for input area */
+    display: flex;
+}
+
+.chat-messages {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.message.received {
+    align-self: flex-start;
+    background-color: #dff0d8; /* Light green bubble */
+    color: #4caf50;
+}
+
+.message.sent {
+    align-self: flex-end;
+    background-color: #4caf50; /* Darker green bubble */
+    color: white;
+}
+
+.chat-input {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #cdebc2; /* Subtle top border */
+}
+
+.input-wrapper {
+    --background: #ffffff; /* White background for input field */
+    border: 1px solid #dcdcdc; /* Light gray border */
+    border-radius: 25px; /* Rounded edges similar to the image */
+    // padding: 0 4px;
+    padding-left: 0;
+    padding-right: 4px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Take up full width */
+    margin-left: 0px; /* Move input wrapper to the left */
+}
+
+.message-input {
+    --color: #aaaaaa; /* Gray color for placeholder text */
+    --padding-start: 0;
+    --padding-end: 0;
+    flex-grow: 1; /* Make the input field grow to fill available space */
+    padding: 10px 0;
+    // text-align: center; /* Center-align the text inside the input field */
+    // margin-left: 4px; /* Move input field to the left inside the wrapper */
+}
+
+.emoji-button {
+    margin-right: 4px; /* Space between emoji icon and input field */
+    margin-left: 1px; /* Space between emoji button and left edge */
+    --ion-color-primary: #131412; /* Green color for icons */
+}
+
+.file-button {
+    margin-right: 0px; /* Space between file button and emoji button */
+    margin-left: 0px; /* Move file button a little to the left */
+    --ion-color-primary: #231e1e;
+    border: none; /* Remove border */
+    background-color: transparent; /* Make the background transparent */
+    box-shadow: none;
+    outline: none;
+}
+
+.file-button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.send-button {
+    margin-left: 8px; /* Space between send icon and input field */
+    outline-color: none;
+    outline: none;
+}
+
+.emoji-container {
+    position: fixed; /* Position the container above the input area */
+    bottom: 70px; /* Adjust based on the height of the chat input */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    border-top: 1px solid #dcdcdc; /* Light gray border */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.emoji-container ion-grid {
+    padding: 0;
+    margin: 0;
+}
+
+.emoji-container ion-row {
+    margin: 0;
+    padding: 0;
+}
+
+.emoji-container ion-col {
+    display: flex;
+    justify-content: center; /* Center emojis horizontally */
+    align-items: center; /* Center emojis vertically */
+}
+
+.emoji-container ion-button {
+    padding: 0;
+    margin: 2px; /* Space between emoji buttons */
+}
+
+.emoji-container ion-icon {
+    font-size: 24px; /* Adjust icon size as needed */
+}

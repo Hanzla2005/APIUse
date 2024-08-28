@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>Sign Up</ion-card-title>
+      <ion-card-subtitle>Create your account by filling up the form</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="signup()">
+        <ion-item>
+          <ion-icon style="margin-right: 8px" name="person-outline"></ion-icon>
+          <ion-input [(ngModel)]="username" name="names" type="text" placeholder="FullName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon style="margin-right: 8px" name="call-outline"></ion-icon>
+          <ion-input [(ngModel)]="phoneNumber" name="phoneNumber" type="text" placeholder="Phone Number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon style="margin-right: 8px" name="mail-outline"></ion-icon>
+          <ion-input [(ngModel)]="email" name="email" type="text" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon style="margin-right: 8px" name="lock-closed-outline"></ion-icon>
+          <ion-input [(ngModel)]="password" name="password" type="password" placeholder="Password"></ion-input>
+        </ion-item>
+
+        <div style="margin: 30px auto; text-align: center">
+          <ion-button
+            style="width: 140px; font-size: 18px; height: 55px"
+            shape="round"
+            type="submit">Sign Up</ion-button>
+        </div>
+      </form>
+
+      <div style="text-align: center; color: rgb(23, 73, 143)">
+        <p style="font-size: 18px; font-weight: bold">Sign Up with</p>
+      </div>
+
+      <div
+        style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+        <ion-icon
+          size="large"
+          style="color: #4267b2; margin-right: 10px"
+          name="logo-facebook"></ion-icon>
+        <ion-icon
+          size="large"
+          style="color: #ffffff; margin-left: 10px"
+          name="logo-google"></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

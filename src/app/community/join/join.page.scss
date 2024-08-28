@@ -1,0 +1,16 @@
+ion-content {
+    --ion-background-color: rgb(220, 220, 220); /* Directly apply background color */
+    
+    ion-item {
+      margin: 20px;
+      color: black;
+      --ion-background-color: white;
+      border-radius: 5px;
+    }
+
+    ion-card{
+        --ion-background-color: white;
+        border: 2px solid green;
+    }
+  }
+  

@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title style="color: black; font-size: 23px;">Community</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <div>
+        <ion-button class="custom-button" slot="end" routerLink = "/my-community">My Communities</ion-button>
+        <ion-button class="custom-button" slot="end" routerLink = "/join">Join a Community</ion-button>
+        <ion-button class="custom-button" slot="end" routerLink = "/new-community">Create new Community</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

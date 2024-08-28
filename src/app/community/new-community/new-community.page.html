@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>Create Community</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+    <img class = "profile-image" src="assets\images\facebook.png" alt="Image not available">
+  </div>
+     <div style="display: flex; justify-content: center; align-items: center;">
+      <ion-icon id ="camera-icon" color="danger" size="large" name="camera-outline" style="border-radius: 50%; padding: 5px; margin-top: -22px; background-color: aliceblue;" (click) = "openCamera()"></ion-icon>
+    </div>
+
+    <form>
+      <div class="details"><input type="text" placeholder="Community Name"></div>
+      <div class="details"><input type="text" placeholder="Admin Name"></div>
+      <div class="details"><input type="text" placeholder="Email"></div>
+      <div class="details"><input type="text" placeholder="City"></div>
+      <div class="details"><input type="text" placeholder="Location"></div>
+
+      <div class="details">
+        <textarea type="text" placeholder="Write Description here"></textarea>
+      </div>
+
+      <div id="button" style="margin: 35px 20px;">
+        <ion-button (click) = "navigateToGuildeLines()" color = "success" style="width: 48%; margin-right: 3px; font-size: 16px;">Next</ion-button>
+        <ion-button (click) = "navigateToCommunity()" color="dark" fill="outline" style="width: 48%; margin-left: 3px; font-size: 16px;">Cancel</ion-button>
+      </div>
+    </form>
+</ion-content>

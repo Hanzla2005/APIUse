@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>Join a Community</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-icon
+      style="padding-right: 9px"
+      name="search-outline"
+      size="large"
+    ></ion-icon>
+    <ion-input
+      placeholder="Search here"
+      type="text"
+    ></ion-input>
+  </ion-item>
+
+  <h4 style="margin-left: 20px; font-weight: bold;">Recommendations</h4>
+  <ion-card>
+    <ion-card-header style="text-align: center;">
+      <ion-card-title style="font-weight: bold;">Hajveri Hostel</ion-card-title>
+      <ion-card-subtitle>90+ members</ion-card-subtitle>
+    </ion-card-header>
+
+    <hr style="border: none; height: 1px; background-color: grey; margin: -3px 0;">
+
+
+    <ion-card-content>
+      <p style="font-size: 18px; color: black;">Admin: Hanzla Kalim</p>
+      <p style="font-size: 18px; color: black;">Created on: 11/08/2024</p>
+      <hr style="border: none; height: 1px; background-color: grey; margin: 8px auto; width: 100%;">
+
+      <p style="font-size: 21px; font-weight: bold; color: black;">Description:</p>
+      <p style="color: black; font-size: 16px;">Created this community to simplify ride-sharing for residents of Hajveri Hostel, ensuring safe and convenient travel together</p>
+      <div id = "request" style="text-align: center;" >
+      <ion-button color = "success" (click) = "requestSent()">Send request</ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

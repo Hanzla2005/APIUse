@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+  <img class = "profile-image" src="assets\images\hanzla.jpg" alt="Image not available">
+</div>
+
+<div class="info" style="display: flex; justify-content: center; align-items: center;">
+  <h1>Hanzla Kalim</h1>
+</div>
+
+<div class="detail">Email: hkalim002&#64;gmail.com</div>
+<div class="detail">Phone: +923001454337</div>
+<div class="detail">Gender: Male</div>
+<div class="detail">Address: Hajveri Hostel, H-12, NUST</div>
+
+<div id="button" style="margin: 35px 20px;">
+  <ion-button (click) = "accept()" color = "success" style="width: 48%; margin-right: 3px;">Accept</ion-button>
+  <ion-button (click) = "reject()" color = "danger" style="width: 48%; margin-left: 3px;">Decline</ion-button>
+</div>
+<p id="after1" style="margin: 35px 20px;"></p>
+</ion-content>

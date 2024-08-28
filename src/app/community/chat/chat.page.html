@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="chat-content">
+  <ion-header collapse="condense">
+    <ion-toolbar class="chat-toolbar">
+      <ion-title size="large">Chat</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="chat-messages">
+    <div *ngFor="let msg of messages" [ngClass]="{'message': true, 'sent': msg.type === 'sent', 'received': msg.type === 'received'}">
+      <p [innerHTML]="msg.text"></p>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <ion-button fill="clear" class="file-button" expand="block">
+      <ion-icon size="large" name="add-circle-outline"></ion-icon>
+    </ion-button>
+
+    <ion-item lines="none" class="input-wrapper">
+      <ion-button fill="clear" class="emoji-button" (click)="toggleEmojiContainer()">
+        <ion-icon size="large" slot="icon-only" name="happy-outline"></ion-icon>
+      </ion-button>
+
+      <ion-input placeholder="Type your message" class="message-input" [(ngModel)]="message"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="sendMessage()" fill="clear" class="send-button" expand="block">
+      <ion-icon color="dark" size="large" slot="icon-only" name="send-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div *ngIf="showEmojiContainer" class="emoji-container">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2" *ngFor="let emoji of emojis">
+          <ion-button fill="clear" (click)="selectEmoji(emoji.code)">
+            <ion-icon [name]="emoji.name + '-outline'"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
